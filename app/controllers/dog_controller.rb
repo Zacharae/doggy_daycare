@@ -1,4 +1,5 @@
 class DogController < ApplicationController
+
   def daycare
   end
 

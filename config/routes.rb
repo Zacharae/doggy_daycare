@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  resources :dogs, only [:index]
+
+#  resources :dogs, only [:index]
+
+
   get 'dogs/index'
 
   get 'dog/daycare'
 
   get 'dog/grooming'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
