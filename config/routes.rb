@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'dogs/index'
+
   get 'dog/daycare'
 
   get 'dog/grooming'
