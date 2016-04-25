@@ -15,6 +15,10 @@ class DogsController < ApplicationController
 		else
 			flash.now[:notice] = "Something went wrong. Didn't save."
 	end
+
+	def show
+		@dog = Dog.find(params[:id])
+	end
 end
 
 private

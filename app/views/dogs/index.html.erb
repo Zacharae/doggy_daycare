@@ -16,6 +16,7 @@
       <td><%= dog.name %></td>
       <td><%= dog.breed %></td>
       <td><%= dog.age %></td>
+      <td><%= link_to "show dog", dog_path(dog) %></td>
     </tr>
     <% end %>
   </tbody>
@@ -23,3 +24,5 @@
 
 
 <%= link_to "add a dog", new_dog_path %>
+<br>
+<a href="/dog/daycare">home</a>
