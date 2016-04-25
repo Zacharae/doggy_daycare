@@ -14,6 +14,7 @@ class DogsController < ApplicationController
 			redirect_to dogs_url, notice: "Saved to Database Successfully"
 		else
 			flash.now[:notice] = "Something went wrong. Didn't save."
+		end
 	end
 
 	def show
@@ -43,7 +44,6 @@ class DogsController < ApplicationController
 		end
 	end
 
-end
 
 private
 	def dog_params
