@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-resources :dogs, only: [:index, :new, :create, :show, :edit, :update]
+resources :dogs
+#, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
   get 'dogs/index'
 
