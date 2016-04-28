@@ -1,6 +1,6 @@
 <h1>Dogs#index</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>ID</th>
@@ -12,22 +12,21 @@
   </thead>
   <tbody>
     <% @dogs.each do |dog| %>
-    <tr>
+        <tr>
       <td><%= dog.id %></td>
       <td><%= dog.name %></td>
-      <td><%= dog.breed %></td>
+      <td><%= dog.breed.try(:name) %></td>
       <td><%= dog.age %></td>
-      <td><%= dog.owner %></td>
-      <td><%= link_to "show dog", dog_path(dog) %></td>
+      <td><%= dog.owner.try(:name) %></td>
+      <td><%= link_to "show dog", dog_path(dog)   %></td>
       <td><%= link_to "edit dog", edit_dog_path(dog) %></td>
-      <td><%= link_to "delete", dog, method: :delete, data: {confirm: "are you sure?"} %></td>
+      <td><%= link_to "delete", dog, method: :delete, data: {confirm: "are you sure?"}  %></td>
 
     </tr>
     <% end %>
   </tbody>
 </table>
 
-
-<%= link_to "add a dog", new_dog_path %>
+<%= link_to "add a dog", new_dog_path  %>
 <br>
 <a href="/dog/daycare">home</a>

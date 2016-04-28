@@ -1,7 +1,7 @@
 <div class="jumbotron">
 <h1>Meet <%= @dog.name %> </h1>
 <p><strong>ID:</strong><%= @dog.id %></p>
-<p><strong>Breed:</strong><%= @dog.breed %></p>
+<p><strong>Breed:</strong><%= @dog.breed.name %></p>
 <p><strong>Age:</strong><%= @dog.age %></p>
 <%= link_to "back to dogs", dogs_path %>
 </div>

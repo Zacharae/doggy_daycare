@@ -3,15 +3,15 @@
   <%= dog_fields.label :name %>
   <%= dog_fields.text_field :name %>
 
-  <%= dog_fields.label :breed %>
-  <%= dog_fields.text_field :breed %>
+  <%= dog_fields.label :breed_id %>
+  <%= dog_fields.collection_select :breed_id, Breed.all, :id, :name %>
 
   <%= dog_fields.label :age %>
   <%= dog_fields.number_field :age %>
 
-  <%= dog_fields.label :owner %>
-  <%= dog_fields.text_field :owner %>
-
+  <%= dog_fields.label :owner_id %>
+  <%= dog_fields.collection_select :owner_id, Owner.all, :id, :name %>
+<!--  xxx , Owner.all, :id, :name -->
   <%= dog_fields.submit %>
 
   <% end %>
